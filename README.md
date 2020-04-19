@@ -1,5 +1,6 @@
 # Spring Boot 2 + Spring Security 5 + JWT 的单页应用 Restful 解决方案
-
+# 預計新增為..
+![](https://i.imgur.com/uK1g78i.png)
 
 ## 特性
 * 使用 JWT 進行鑑權，支持 token 過期
@@ -7,13 +8,14 @@
 * 盡可能貼合 Spring Security 的設計
 * 實現註解權限控制
 
-## 預計新增
-* 攔截header為範例
-* 預計Ehcache 改為 redis 單機 進行緩存
-* 預計Ehcache 改為 redis cluster 進行緩存
-* 預計loadblance 採用 nginx 進行 負載平衡
+## add
+- [x] add header filter example
+- [x] change Ehcache to redis single cache
+- [x] change auth  Cluster 
+- [x] use nginx loadblance
+- [x] add nginx loadblance confg
 
-## 呼叫方式
+## call funaction
 ```java
     private static void sendRequest() throws Exception{
     	  HttpPost post = new HttpPost("http://192.168.0.146:8080/login");
@@ -61,7 +63,14 @@
           }
     }
 ```
-
+# Quick start
+> ./start.bat
+# server port
+nginx :port 9800
+nginx client1 :port 9801
+nginx client2:port 9802
+auth1 :port 9803
+auth2 :port 9804
 # Postman
 login/post
 >http://localhost:8080/login
@@ -73,6 +82,11 @@ user/get
 >
 ![](https://i.imgur.com/0wB5IiK.png)
 
+# redis
+![](https://i.imgur.com/KZv2T3i.png)
+![](https://i.imgur.com/zP5MrLW.png)
 
-# 原始項目
+
+
+# Original project
 https://github.com/Smith-Cruise/Spring-Boot-Security-JWT-SPA
