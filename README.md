@@ -63,7 +63,7 @@
           }
     }
 ```
-# Quick start
+# quick start
 > ./start.bat
 # server port
 nginx :port 9800
@@ -71,7 +71,7 @@ nginx client1 :port 9801
 nginx client2:port 9802
 auth1 :port 9803
 auth2 :port 9804
-# Postman
+# postman
 login/post
 >http://localhost:8080/login
 >
@@ -88,5 +88,5 @@ user/get
 
 
 
-# Original project
+# original project
 https://github.com/Smith-Cruise/Spring-Boot-Security-JWT-SPA
