@@ -1,0 +1,3 @@
+2020/04/19 15:18:45 [emerg] 15032#6444: "listen" directive is not allowed here in D:\Programming\loadblance\nginx-client2/conf/nginx.conf:18
+2020/04/19 15:19:05 [emerg] 18824#23396: "listen" directive is not allowed here in D:\Programming\loadblance\nginx-client2/conf/nginx.conf:18
+2020/04/19 15:19:43 [emerg] 5532#18612: "listen" directive is not allowed here in D:\Programming\loadblance\nginx-client2/conf/nginx.conf:18

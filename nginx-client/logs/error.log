@@ -1,0 +1,6 @@
+2020/04/19 15:18:22 [emerg] 32012#31340: "listen" directive is not allowed here in D:\Programming\loadblance\nginx-client/conf/nginx.conf:18
+2020/04/19 15:20:14 [emerg] 7080#9000: unknown log format "main" in D:\Programming\loadblance\nginx-client/conf/nginx.conf:21
+2020/04/19 15:20:31 [emerg] 540#19012: invalid URL prefix in D:\Programming\loadblance\nginx-client/conf/nginx.conf:23
+2020/04/19 15:21:26 [emerg] 12108#18792: "upstream" directive is not allowed here in D:\Programming\loadblance\nginx-client/conf/nginx.conf:16
+2020/04/19 15:22:25 [emerg] 9772#16176: host not found in upstream "myapp2" in D:\Programming\loadblance\nginx-client/conf/nginx.conf:27
+2020/04/19 15:22:47 [emerg] 6332#20672: invalid URL prefix in D:\Programming\loadblance\nginx-client/conf/nginx.conf:27

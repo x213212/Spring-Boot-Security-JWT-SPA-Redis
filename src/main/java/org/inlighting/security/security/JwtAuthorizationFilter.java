@@ -57,14 +57,14 @@ public class JwtAuthorizationFilter extends BasicAuthenticationFilter {
         if (! JwtUtil.verify(token, username, userDetails.getPassword())) {
             return null;
         }
-        System.out.println( "-------");
-
-
-        System.out.println( new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities()).getName().toString());
-        System.out.println( new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities()).getPrincipal().toString());
-        System.out.println( new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities()).getAuthorities().toString());
-        System.out.println( new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities()).getCredentials());
-        System.out.println( "-------");
+//        System.out.println( "-------");
+//
+//
+//        System.out.println( new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities()).getName().toString());
+//        System.out.println( new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities()).getPrincipal().toString());
+//        System.out.println( new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities()).getAuthorities().toString());
+//        System.out.println( new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities()).getCredentials());
+//        System.out.println( "-------");
         return new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
     }
 }

@@ -88,11 +88,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         // 对自己编写的 UserDetailsServiceImpl 进一步包装，实现缓存
         CachingUserDetailsService cachingUserDetailsService = cachingUserDetailsService(userDetailsServiceImpl);
         // jwt-cache 我们在 ehcache.xml 配置文件中有声明
-        
+        //呼叫自己額外重寫的
         UserCache userCache = new SessionRedisUserCache	(cacheManager.getCache("jwt-cache"),  redisTemplate);
         
         cachingUserDetailsService.setUserCache(userCache);
-        System.out.println("test");
+        
         /*
         security 默认鉴权完成后会把密码抹除，但是这里我们使用用户的密码来作为 JWT 的生成密钥，
         如果被抹除了，在对 JWT 进行签名的时候就拿不到用户密码了，故此处关闭了自动抹除密码。

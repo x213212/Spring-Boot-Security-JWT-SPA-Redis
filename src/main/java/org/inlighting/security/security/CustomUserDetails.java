@@ -1,6 +1,7 @@
 package org.inlighting.security.security;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
@@ -29,9 +30,24 @@ public class CustomUserDetails extends Admin implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<SimpleGrantedAuthority> listGrantedAuth = new ArrayList<>();
-        super.getAuthorities().forEach(auth -> {
-            listGrantedAuth.add(new SimpleGrantedAuthority(auth.toString()));
-        });
+        List<SimpleGrantedAuthority> listGrantedAuth2 = new ArrayList<SimpleGrantedAuthority>();
+//        listGrantedAuth2=(List<SimpleGrantedAuthority>) super.getAuthorities();
+//        for(Collection<SimpleGrantedAuthority> element : super.getAuthorities()) {
+//            System.out.println(element);
+//        }
+//        for (int i = 0;i<listGrantedAuth2.size()  ; i++)
+//        {
+//        			 listGrantedAuth.add(new SimpleGrantedAuthority(listGrantedAuth2.get(i).toString()));
+//        	
+//        }
+        
+        for(GrantedAuthority role :super.getAuthorities()) {
+          //  grantedAuthorities.add(new SimpleGrantedAuthority(role.toString()));
+            listGrantedAuth.add(new SimpleGrantedAuthority(role.toString()));
+        }
+//        forEach(auth -> {
+//            listGrantedAuth.add(new SimpleGrantedAuthority(auth.toString()));
+//        });
         return listGrantedAuth;
     }
  
