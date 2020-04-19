@@ -1,5 +1,5 @@
-# Spring Boot 2 + Spring Security 5 + JWT 的单页应用 Restful 解决方案
-# 預計新增為..
+# Spring Boot 2 + Spring Security 5 + JWT 的单页应用 Restful 解决方案 by redis
+# rewrite
 ![](https://i.imgur.com/uK1g78i.png)
 
 ## 特性
