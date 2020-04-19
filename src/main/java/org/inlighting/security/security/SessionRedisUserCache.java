@@ -55,7 +55,7 @@ public class SessionRedisUserCache implements UserCache {
 
 	// ~ Instance fields
 	// ================================================================================================
-		
+	public long sessionTimeout = 100;
 	public final Cache cache;
     public final RedisTemplate<String, CustomUserDetails> redisTemplate;
 	// ~ Constructors
@@ -103,7 +103,7 @@ public class SessionRedisUserCache implements UserCache {
 	     System.out.println(customUserDetails.getUsername());
 	     System.out.println(customUserDetails.getAuthorities());
 
-	     redisTemplate.opsForValue().set(customUserDetails.getUsername(),customUserDetails);
+	     redisTemplate.opsForValue().set(customUserDetails.getUsername(),customUserDetails,sessionTimeout);
 	     //原本opsForValue()是只能操作字符串的.现在就可以操作对象了
 	    //customUserDetails result = (customUserDetails) template.opsForValue().get(customUserDetails.getUsername()+"");
 		//System.out.println(result.toString());
